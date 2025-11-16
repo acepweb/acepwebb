@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Semangat Skripsian</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #4facfe 0%, #5d8183 100%);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+            color: #fff;
+        }
+        h1 .icon {
+            color: #ffeb3b;
+        }
+        .motivasi-box {
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparan */
+            border: 2px solid #ffeb3b; /* Border kuning */
+            border-radius: 15px; /* Sudut melengkung */
+            padding: 20px;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+            animation: slideUp 1.5s ease-in-out;
+        }
+        p {
+            font-size: 1.5em;
+            margin: 0;
+            line-height: 1.6;
+            color: #e8f5e8;
+        }
+        button {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ffeb3b;
+            color: #333;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1><span class="icon">🌟</span> Semangat Skripsian! <span class="icon">🌟</span></h1>
+    <div class="motivasi-box">
+        <p id="motivasi">Jangan menyerah! Setiap halaman yang kamu tulis membawa kamu lebih dekat ke impianmu. Ingat, skripsi bukanlah akhir, tapi awal dari perjalanan baru.</p>
+    </div>
+    <button onclick="ubahPesan()">Dapatkan Motivasi Baru</button>
+
+    <script>
+        const pesan = [
+            "Jangan menyerah! Setiap halaman yang kamu tulis membawa kamu lebih dekat ke impianmu. Ingat, skripsi bukanlah akhir, tapi awal dari perjalanan baru.",
+            "Kamu hebat! Skripsi ini adalah bukti ketekunanmu. Tetap fokus, dan hasilnya akan memuaskan.",
+            "Percayalah pada dirimu. Setiap tantangan adalah kesempatan untuk belajar. Semangat terus!",
+            "Bayangkan kegembiraan saat skripsi selesai. Itu akan sepadan dengan usahamu. Tetap semangat!",
+            "Kamu bukan sendirian. Banyak orang telah melewati ini dan berhasil. Kamu juga bisa!"
+        ];
+
+        function ubahPesan() {
+            const randomIndex = Math.floor(Math.random() * pesan.length);
+            document.getElementById('motivasi').textContent = pesan[randomIndex];
+        }
+    </script>
+</body>
+</html>
